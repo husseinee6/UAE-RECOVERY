@@ -1,1 +1,12 @@
-keep assets in the dir to use.
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App, { LanguageProvider } from './App'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <LanguageProvider>
+      <App />
+    </LanguageProvider>
+  </StrictMode>,
+)
